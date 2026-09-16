@@ -17,10 +17,10 @@ if asked explain CRP, reak it down into these exact steps:
   * Executes only after HTML parsing is completely finished.
   * Guarantees execution order (if you have multiple deferred scrips, tehy execute in the order they appear).
 * `async`:
- * Downlaods in the background.
- * Executes as soon as the download finishes, pausing the HTML parser momentarily to execute.
- * No guaranteed order (whichever downlaod first, executes first).
- * Use case: Independent third-party scripts like Goggle Analytics or ads.
+  * Downlaods in the background.
+  * Executes as soon as the download finishes, pausing the HTML parser momentarily to execute.
+  * No guaranteed order (whichever downlaod first, executes first).
+  * Use case: Independent third-party scripts like Goggle Analytics or ads.
 
 ## 3. Rendering Patterns: CSR vs. SSR 
 **The Concept:** Where is the HTML generated-on the user's browser (Client) or the server? 
