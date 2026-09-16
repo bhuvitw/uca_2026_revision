@@ -13,7 +13,7 @@ if asked explain CRP, reak it down into these exact steps:
 ## 2. Optimizing Script Loading: `async` VS. `defer`
 **The Concept:** Both attributes allow JavaScript files to download in the backgroudn withotu blocking the HTML parse, but they execute differntly
 * `defer`: 
-* * Downlaod in the background.
+  * Downlaod in the background.
 - * Executes only after HTML parsing is completely finished.
 - * Guarantees execution order (if you have multiple deferred scrips, tehy execute in the order they appear).
 * `async`:
