@@ -8,6 +8,8 @@
     * Pick a value and put that into it's correct place
 * [x] Selection Sort
     * take index and put the minimum value there
-* [ ] Merge Sort
-* [ ] Quick Sort
+* [x] Merge Sort
+    * Splite (by mid) and then merge using (two pointers)
+* [x] Quick Sort
+    * Pivot and left and right are less then and greater than that
 * [ ] Heap Sort

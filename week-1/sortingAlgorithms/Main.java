@@ -16,9 +16,12 @@ public class Main{
 
         // SelectionSort solve = new SelectionSort(); 
         // BubbleSort solve = new BubbleSort(); 
-        InsertionSort solve = new InsertionSort(); 
+        // InsertionSort solve = new InsertionSort(); 
+        // MergeSort solve = new MergeSort(); 
+        // QuickSort solve = new QuickSort(); 
+        HeapSort solve = new HeapSort(); 
 
-        solve.sort(test); 
+        solve.sort(test);
 
         for(int n : test)
             System.out.print(n + " "); 
