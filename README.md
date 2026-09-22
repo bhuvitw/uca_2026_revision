@@ -1,5 +1,6 @@
 # uca_2026_revision
 
-* [x] week-0
-* [ ] week-1
-* [ ] week-9
+* [x] week-00
+* [ ] week-01
+* [ ] week-09
+* [x] week-10

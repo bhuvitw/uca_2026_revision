@@ -8,3 +8,11 @@
 -- , Book_Issue(issue_id, book_id, student_id, issue_date, return_date)
 -- , Fee_Payment(payment_id, student_id, amount, payment_date, semester)
 
+SELECT 
+    i.name 
+FROM Instructor i 
+JOIN Course c 
+    ON c.instructor_id = i.instructor_id 
+GROUP BY i.instructor_id
+HAVING
+    count(c.course_id) > (SELECT AVG(course_id) FROM Course)
