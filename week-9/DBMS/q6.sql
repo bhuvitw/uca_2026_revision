@@ -8,6 +8,8 @@
 -- , Book_Issue(issue_id, book_id, student_id, issue_date, return_date)
 -- , Fee_Payment(payment_id, student_id, amount, payment_date, semester)
 
+-- titles of books whose author has written books catalogued under more than one department. (Use self-joins or GROUP BY author HAVING COUNT(DISTINCT dept_id) > 1 joined back to fetch qualifying titles).
+
 SELECT
 title
 FROM Book
