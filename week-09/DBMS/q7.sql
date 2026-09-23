@@ -11,21 +11,21 @@
 -- Find the names of instructors who teach more courses than the average number of courses taught per instructor (computed across all instructors who teach at least one course).
 
 SELECT
-i.instructor_id
+    i.name
 FROM Instructor i
-JOIN Course c ON c.instructor_id = i.instructor_id
+JOIN Course c 
+    ON c.instructor_id = i.instructor_id
 GROUP BY i.instructor_id
-HAVING COUNT(course_id) >
-(
-SELECT
-AVG(course_count)
-FROM
-(
-SELECT
-i.instructor_id, 
-COUNT(c.course_id) as course_count
-FROM Instructor i
-JOIN Course c on c.instructor_id = i.instructor_id
-GROUP BY i.instructor_id
-) x
-)
+HAVING 
+    COUNT(course_id) > (
+        SELECT
+            AVG(course_count * 1.0)
+        FROM (  SELECT
+                i.instructor_id, 
+                COUNT(c.course_id) as course_count
+                FROM Instructor i
+                JOIN Course c on c.instructor_id = i.instructor_id
+                GROUP BY i.instructor_id
+        ) x
+    );
+
