@@ -8,7 +8,7 @@
 -- , Book_Issue(issue_id, book_id, student_id, issue_date, return_date)
 -- , Fee_Payment(payment_id, student_id, amount, payment_date, semester)
 
-Find the names of instructors who teach more courses than the average number of courses taught per instructor (computed across all instructors who teach at least one course).
+-- Find the names of instructors who teach more courses than the average number of courses taught per instructor (computed across all instructors who teach at least one course).
 
 SELECT
 i.instructor_id
