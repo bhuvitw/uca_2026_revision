@@ -8,11 +8,24 @@
 -- , Book_Issue(issue_id, book_id, student_id, issue_date, return_date)
 -- , Fee_Payment(payment_id, student_id, amount, payment_date, semester)
 
-SELECT 
-    i.name 
-FROM Instructor i 
-JOIN Course c 
-    ON c.instructor_id = i.instructor_id 
+Find the names of instructors who teach more courses than the average number of courses taught per instructor (computed across all instructors who teach at least one course).
+
+SELECT
+i.instructor_id
+FROM Instructor i
+JOIN Course c ON c.instructor_id = i.instructor_id
 GROUP BY i.instructor_id
-HAVING
-    count(c.course_id) > (SELECT AVG(course_id) FROM Course)
+HAVING COUNT(course_id) >
+(
+SELECT
+AVG(course_count)
+FROM
+(
+SELECT
+i.instructor_id, 
+COUNT(c.course_id) as course_count
+FROM Instructor i
+JOIN Course c on c.instructor_id = i.instructor_id
+GROUP BY i.instructor_id
+) x
+)
