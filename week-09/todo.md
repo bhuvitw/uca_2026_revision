@@ -16,13 +16,13 @@
 - [x] **Q3:** List every course, instructor name, scheduled room/day, and total enrolled students.
 
 ### Section B — Cross-department & Self-referential Logic
-- [ ] **Q4:** Find students enrolled in at least one course outside their home department.
-- [ ] **Q5:** Find pairs of students in the same course/semester with different grades (no mirrored duplicates).
-- [ ] **Q6:** List titles of books whose author has books catalogued under more than one department.
+- [x] **Q4:** Find students enrolled in at least one course outside their home department.
+- [x] **Q5:** Find pairs of students in the same course/semester with different grades (no mirrored duplicates).
+- [x] **Q6:** List titles of books whose author has books catalogued under more than one department.
 
 ### Section C — Aggregation with HAVING & Subqueries
-- [ ] **Q7:** Find instructors teaching more courses than the average number of courses per instructor.
-- [ ] **Q8:** Find courses with an average grade point > overall university average (A=4, B=3, C=2).
+- [x] **Q7:** Find instructors teaching more courses than the average number of courses per instructor.
+- [x] **Q8:** Find courses with an average grade point > overall university average (A=4, B=3, C=2).
 - [ ] **Q9:** Find departments where total fees collected > 20% of the department's budget.
 
 ### Section D — NOT EXISTS / Relational Division
