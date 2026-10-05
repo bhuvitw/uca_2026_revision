@@ -1,0 +1,1 @@
+find /var/log/app -type f -name "*.log" -mtime +30 -print0| xargs -0 -P 4 gzip 
